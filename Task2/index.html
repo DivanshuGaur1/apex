@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>To-Do List</h2>
+      <form id="todoForm" onsubmit="return addTodo()">
+        <input type="text" id="todoInput" placeholder="Enter a task..." required />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="todoList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
